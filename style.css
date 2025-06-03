@@ -73,3 +73,78 @@ li.completed {
 .task-button.delete{
     color: red;
 }
+
+filters {
+    margin-bottom: 1rem;
+}
+
+#filters button{
+    margin-right: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+}
+
+li span {
+  transition: all 0.3s ease; /* Smooth transition for color and text-decoration */
+}
+
+li span.completed {
+  text-decoration: line-through;
+  color: #888;
+  opacity: 0.6;
+  transform: scale(1.05); /* Optional: slight grow effect */
+}
+
+@keyframes highlight {
+  from { background-color: yellow; }
+  to { background-color: transparent; }
+}
+
+#filters {
+  display: flex;
+  justify-content: center; /* Center the buttons */
+  gap: 1rem; /* Space between buttons */
+  margin-bottom: 1rem; /* Spacing below the filters */
+}
+
+#filters button {
+  padding: 0.5rem 1rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 0.9rem;
+}
+
+#filters button:hover {
+  background-color: #1e40af;
+  transform: scale(1.05);
+}
+
+#filters button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.5);
+}
+
+
+li {
+  display: flex;
+  justify-content: space-between; /* Pushes text to left, buttons to right */
+  align-items: center; /* Vertically center items */
+  padding: 0.5rem;
+  background-color: #f9f9f9;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+}
+
+.task-buttons {
+  display: flex;
+  gap: 0.5rem; /* Space between ✔️ and ❌ */
+}
+
+li span {
+  flex-grow: 1; /* Span takes up remaining space */
+  word-break: break-word; /* Allow long text to wrap */
+}
